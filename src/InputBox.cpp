@@ -26,17 +26,17 @@ void InputBox::dealEvent(BP_Event& e)
     {
         auto converted = OpenCCConverter::getInstance()->convertUTF8(e.text.text);
         converted = PotConv::conv(converted, "utf-8", "cp936");
-        //printf("input %s\n", converted.c_str());
+        //fmt::print("input %s\n", converted.c_str());
         text_ += converted;
         break;
     }
     case BP_TEXTEDITING:
     {
-        //看起来不太正常，待查
+        //鐪嬭捣鏉ヤ笉澶甯革紝寰呮煡
         //auto composition = e.edit.text;
         //auto cursor = e.edit.start;
         //auto selection_len = e.edit.length;
-        //printf("editing %s\n", e.edit.text);
+        //fmt::print("editing %s\n", e.edit.text);
         break;
     }
     case BP_KEYDOWN:

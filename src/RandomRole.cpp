@@ -5,7 +5,7 @@ RandomRole::RandomRole()
 {
     setShowButton(false);
     button_ok_ = addChild<Button>(350, 55);
-    button_ok_->setText("´_¶¨");
+    button_ok_->setText("ç¢ºå®š");
     head_ = addChild<Head>(-290, 100);
 }
 
@@ -40,7 +40,7 @@ void RandomRole::onPressedOK()
     role_->Unusual = 25 + r.rand_int(6);
     role_->HiddenWeapon = 25 + r.rand_int(6);
     role_->IQ = 1 + r.rand_int(100);
-    printf("IQ is %d\n", role_->IQ);
+    fmt::print("IQ is %d\n", role_->IQ);
 }
 
 void RandomRole::draw()
